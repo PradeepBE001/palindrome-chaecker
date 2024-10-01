@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FD Rate Calculator</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="wrapper">
+        <h2>PALINDROME</h2>
+        <h2>CHECKER</h2>
+        <div class="inutdiv">
+          <input type="text" id="input" placeholder="give input" >
+        </div>
+          <div>
+            <button type="submit" onclick="isPalindrome()">Result</button>
+        </div>
+        <div id="result">
+        </div>
+
+
+    </div>
+    <script>
+        function isPalindrome(){
+        let str=(document.getElementById("input").value)
+        str = str.replace(/\s+/g, '').toLowerCase();
+            let str1 = str.split('').reverse().join('');
+            let isPalin = (str === str1);
+
+            let result = document.querySelector('#result');
+            result.innerHTML = "Is palindrome: " + (isPalin ? "true" : "false");
+            
+        }
+    </script>
+</body>
+</html>
